@@ -14,6 +14,15 @@ Context:
 [paste only relevant excerpts here]
 ///
 
+Output Format:
+- [format specification: paragraph, list, table, code, JSON, etc.]
+- [structure: sections, headers, length]
+
+Examples (optional):
+///
+[few-shot examples to guide style and structure when helpful]
+///
+
 Constraints:
 - Format: [bullets/markdown/table]
 - Style: [plain, analytical, concise]
