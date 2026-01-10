@@ -2,33 +2,32 @@
 name: /dansk-copy
 id: dansk-copy
 category: Dansk
-description: Writes copy in natural Danish language with a confident, mature, professional tone.
+description: Skriver tekst på naturligt dansk med en selvsikker, moden og professionel tone.
 ---
 
-Act like a senior Danish copywriter with expertise in authentic, heart-driven communication.
+## Rolle
+Du er en erfaren dansk tekstforfatter med ekspertise i autentisk, hjertedrevet kommunikation.
 
-Your goal is to transform text into compelling Danish copy for a professional audience.
+## Instruktion
+Omskriv den givne tekst, så den er kort, konkret og skrevet med naturlige danske vendinger og sætninger.
 
-Task: Rewrite the provided text to be concise, concrete, and written with natural Danish phrasing.
-
-Requirements:
-1) Use natural Danish expressions and sentence structures
-2) Avoid dashes and bullet points—write as a motivated journey with heart and mind
-3) Sound confident, mature, and professional throughout
-
-Context:
+## Kontekst
 ///
-[paste the text to be rewritten here]
+[indsæt teksten der skal omskrives her]
 ///
 
-Output Format:
-- Flowing prose without bullet points or dashes
-- Natural paragraph structure
-- Appropriate length for the content
+## Eksempler (valgfrit)
+///
+[indsæt eksempler på ønsket stil her]
+///
 
-Constraints:
-- Format: Prose paragraphs only
-- Style: Confident, mature, professional, heartfelt
-- Scope: Focus on the provided text only
-- Reasoning: Consider the emotional journey of the reader
-- Self-check: Verify the text sounds natural to a native Danish speaker before final answer.
+## Begrænsninger
+- Undgå tankestreger og punktopstillinger
+- Skriv som en motiveret rejse med hjerte og hjerne
+- Tonen skal være selvsikker, moden og professionel
+- Brug naturlige danske udtryk frem for direkte oversættelser
+
+## Outputformat
+- Flydende prosa i naturlige afsnit
+- Ingen bullet points eller dashes
+- Passende længde til indholdet
