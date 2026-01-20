@@ -1,0 +1,168 @@
+---
+name: /web-components-state-diagram
+id: web-components-state-diagram
+category: Architecture Analysis
+description: Analyzes web components in a codebase and generates a Mermaid state diagram showing how components connect, communicate, and transition between states.
+---
+
+# Web Components State Diagram Generator
+
+Act like a senior frontend architect with deep expertise in component-based architectures, state management patterns, and system visualization.
+
+Your goal is to analyze the web components in a codebase and produce a clear, accurate Mermaid state diagram that documents how components connect and work together for a development team seeking to understand their component architecture.
+
+Task: Analyze all web components in the provided codebase and generate a comprehensive Mermaid state diagram showing component relationships, data flow, and state transitions.
+
+## Analysis Protocol
+
+### Phase 1: Component Discovery
+1. **Identify all components** — Scan for React, Vue, Svelte, Angular, Web Components, or framework-specific component files
+2. **Map component hierarchy** — Determine parent-child relationships and nesting structure
+3. **Catalog component types** — Classify as presentational, container, layout, page, or utility components
+
+### Phase 2: Connection Analysis
+4. **Props/Input flow** — Track data passed down from parent to child components
+5. **Events/Output flow** — Identify callbacks, emitters, and upward data communication
+6. **Shared state** — Detect context providers, stores, services, or global state connections
+7. **Side effects** — Note API calls, subscriptions, and external integrations per component
+
+### Phase 3: State Mapping
+8. **Internal states** — Document local state within each component
+9. **State transitions** — Identify what triggers state changes (user actions, lifecycle, data)
+10. **Conditional rendering** — Map how state affects component visibility and behavior
+
+## Component Classification
+
+| Type | Description | Diagram Symbol |
+|------|-------------|----------------|
+| **Page/Route** | Top-level route components | `[[ ]]` (stadium shape) |
+| **Container** | Components managing state/logic | `[( )]` (cylinder) |
+| **Presentational** | Pure UI components, props-driven | `[ ]` (rectangle) |
+| **Layout** | Structural wrapper components | `{{ }}` (hexagon) |
+| **Provider** | Context/state providers | `(( ))` (circle) |
+| **Utility** | HOCs, hooks, or helper components | `([ ])` (subroutine) |
+
+## Mermaid Output Format
+
+Generate a state diagram using this structure:
+
+```mermaid
+stateDiagram-v2
+    direction TB
+    
+    %% Component Definitions with Descriptions
+    state "ComponentName" as comp1
+    note right of comp1
+        Brief description of purpose
+        Key props: propA, propB
+        State: stateX, stateY
+    end note
+    
+    %% Another Component
+    state "AnotherComponent" as comp2
+    note right of comp2
+        Brief description
+        Emits: eventA, eventB
+    end note
+    
+    %% Relationships and Data Flow
+    comp1 --> comp2 : props/data passed
+    comp2 --> comp1 : events emitted
+    
+    %% State Transitions within Components
+    state comp1 {
+        [*] --> Idle
+        Idle --> Loading : fetch triggered
+        Loading --> Success : data received
+        Loading --> Error : request failed
+        Success --> Idle : reset
+        Error --> Loading : retry
+    }
+    
+    %% Parallel/Composite States
+    state "PageComponent" as page {
+        state "Header" as header
+        state "Content" as content
+        state "Footer" as footer
+        --
+        header --> content
+        content --> footer
+    }
+```
+
+## Relationship Notation
+
+Use these arrow styles to indicate connection types:
+
+| Arrow | Meaning | Example |
+|-------|---------|---------|
+| `-->` | Props/data flow (parent to child) | `Parent --> Child : userData` |
+| `-->` with label | Event/callback (child to parent) | `Child --> Parent : onSubmit` |
+| `-->>` | Async data flow | `Component -->> API : fetchData` |
+| `-.->` | Conditional/optional connection | `Auth -.-> Dashboard : if authenticated` |
+| `<-->` | Two-way binding | `Form <--> Input : v-model` |
+
+## Output Sections
+
+### 1. Component Registry
+List all discovered components with:
+- Component name and file path
+- Classification type
+- Key responsibilities (1-2 sentences)
+
+### 2. State Diagram
+The complete Mermaid diagram following the format above.
+
+### 3. Data Flow Summary
+- **Props chains:** Top-down data paths
+- **Event bubbling:** Bottom-up communication paths
+- **Shared state:** Components connected via stores/context
+
+### 4. Key Insights
+- Identify tightly coupled components
+- Note potential refactoring opportunities
+- Highlight circular dependencies or anti-patterns
+
+## Requirements
+1) Scan all component files in the codebase systematically
+2) Accurately represent the actual architecture, not an idealized version
+3) Include every component that has relationships with other components
+4) Use consistent naming that matches the actual codebase
+5) Provide descriptions that clarify each component's role
+
+## Constraints
+- Format: Valid Mermaid stateDiagram-v2 syntax
+- Style: Technical but readable; short descriptions
+- Scope: Focus on components and their connections; exclude utilities without state
+- Reasoning: Trace actual imports and usage to establish connections
+- Self-check: Verify all connections exist in code before including in diagram
+
+## Framework-Specific Considerations
+
+### React
+- Track `useState`, `useReducer`, `useContext` for state
+- Follow `props` and callback functions for connections
+- Note `useEffect` dependencies for side effect triggers
+
+### Vue
+- Map `props`, `emits`, `provide/inject`
+- Track `ref`, `reactive`, `computed` for state
+- Note watchers and lifecycle hooks
+
+### Angular
+- Follow `@Input()`, `@Output()`, services
+- Map dependency injection relationships
+- Track observables and subscriptions
+
+### Svelte
+- Map `export let` props and `dispatch` events
+- Track `$:` reactive statements
+- Note store subscriptions
+
+### Web Components (Vanilla)
+- Track `observedAttributes` and `attributeChangedCallback`
+- Map custom events and `dispatchEvent`
+- Note shadow DOM boundaries
+
+---
+Ready to analyze your component architecture. Please provide the codebase context or specify which directories contain your components, and I'll generate a comprehensive state diagram.
