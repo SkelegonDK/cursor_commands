@@ -16,7 +16,7 @@ Task: Analyze all web components in the provided codebase and generate a compreh
 ## Analysis Protocol
 
 ### Phase 1: Component Discovery
-1. **Identify all components** — Scan for React, Vue, Svelte, Angular, Web Components, or framework-specific component files
+1. **Identify all components** — Scan for React, Vue, Svelte, Angular, Astro, Web Components, or framework-specific component files
 2. **Map component hierarchy** — Determine parent-child relationships and nesting structure
 3. **Catalog component types** — Classify as presentational, container, layout, page, or utility components
 
@@ -158,6 +158,17 @@ The complete Mermaid diagram following the format above.
 - Map `export let` props and `dispatch` events
 - Track `$:` reactive statements
 - Note store subscriptions
+
+### Astro
+- Track `Astro.props` for component props in frontmatter
+- Map `client:*` directives (`client:load`, `client:idle`, `client:visible`, `client:media`, `client:only`) for hydration boundaries
+- Identify island architecture patterns — note which components are static vs. interactive
+- Track `<slot />` and named slots for content projection
+- Map embedded framework components (React, Vue, Svelte within `.astro` files)
+- Note data fetching in frontmatter (`fetch`, `getCollection`, content collections)
+- Track `Astro.redirect`, `Astro.url`, and other runtime APIs
+- Identify page components in `src/pages/` vs. reusable components in `src/components/`
+
 
 ### Web Components (Vanilla)
 - Track `observedAttributes` and `attributeChangedCallback`
