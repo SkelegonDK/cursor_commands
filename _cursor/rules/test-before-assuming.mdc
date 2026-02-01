@@ -1,0 +1,15 @@
+---
+description: Always run tests before assuming why they fail
+alwaysApply: true
+---
+
+# Test Before Assuming
+
+When working with test failures:
+
+1. **Run the test first** - Execute the failing test(s) before making any assumptions about the cause
+2. **Read actual output** - Analyze the real error messages, stack traces, and assertion failures
+3. **No speculative fixes** - Do not assume why a test fails based on code inspection alone
+4. **Verify after changes** - Always re-run tests after making fixes to confirm the issue is resolved
+
+This applies to unit tests, integration tests, UI tests, and any other test types.
