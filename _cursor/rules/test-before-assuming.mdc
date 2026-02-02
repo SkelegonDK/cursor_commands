@@ -1,8 +1,7 @@
 ---
 description: Always run tests before assuming why they fail
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Test Before Assuming
 
 When working with test failures:
