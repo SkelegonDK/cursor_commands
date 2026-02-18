@@ -1,8 +1,6 @@
 ---
-name: /based
-id: based
-category: Evidence-Based Solutions
-description: Grounds conclusions, solutions, and suggestions in real, factual, and contemporary solutions from professionals in the relevant field through web research and source verification.
+description: Grounds conclusions and suggestions in real, factual, contemporary solutions from professionals via web research and source verification
+alwaysApply: false
 ---
 
 # Evidence-Based Research Protocol

@@ -1,8 +1,6 @@
 ---
-name: /web-components-state-diagram
-id: web-components-state-diagram
-category: Architecture Analysis
-description: Analyzes web components in a codebase and generates a Mermaid state diagram showing how components connect, communicate, and transition between states.
+description: Analyzes web components in a codebase and generates a Mermaid state diagram showing how components connect, communicate, and transition between states
+alwaysApply: false
 ---
 
 # Web Components State Diagram Generator
@@ -168,7 +166,6 @@ The complete Mermaid diagram following the format above.
 - Note data fetching in frontmatter (`fetch`, `getCollection`, content collections)
 - Track `Astro.redirect`, `Astro.url`, and other runtime APIs
 - Identify page components in `src/pages/` vs. reusable components in `src/components/`
-
 
 ### Web Components (Vanilla)
 - Track `observedAttributes` and `attributeChangedCallback`

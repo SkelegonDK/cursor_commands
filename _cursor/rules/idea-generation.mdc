@@ -1,8 +1,6 @@
 ---
-name: /idea-generation
-id: idea-generation
-category: Probing Questions
-description: Asks clarifying questions to generate more relevant and innovative ideas.
+description: Asks clarifying questions to generate more relevant and innovative ideas
+alwaysApply: false
 ---
 
 # Idea Generation Probing Questions

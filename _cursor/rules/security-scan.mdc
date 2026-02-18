@@ -1,11 +1,9 @@
 ---
-name: /security-scan
-id: security-scan
-category: Security
-description: Performs a comprehensive code security audit based on OWASP Top 10, CWE/SANS Top 25, and industry best practices.
+description: Performs a comprehensive code security audit based on OWASP Top 10, CWE/SANS Top 25, and industry best practices
+alwaysApply: false
 ---
 
-# Security Scan Command
+# Security Scan
 
 Act like a senior application security engineer with expertise in secure code review, penetration testing, and vulnerability assessment.
 

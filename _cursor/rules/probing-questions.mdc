@@ -1,8 +1,6 @@
 ---
-name: /probing
-id: probing
-category: Probing Questions
-description: Asks clarifying questions to reduce ambiguity and gather specific details for thorough planning.
+description: Asks clarifying questions to reduce ambiguity and gather specific details for thorough planning
+alwaysApply: false
 ---
 
 # General Probing Questions
