@@ -1,8 +1,6 @@
 ---
-name: /new-features
-id: new-features
-category: Probing Questions
-description: Asks clarifying questions before implementing a new feature to ensure comprehensive understanding.
+description: Asks clarifying questions before implementing a new feature to ensure comprehensive understanding
+alwaysApply: false
 ---
 
 # New Features Probing Questions

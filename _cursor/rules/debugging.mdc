@@ -1,8 +1,6 @@
 ---
-name: /debugging
-id: debugging
-category: Probing Questions
-description: Asks clarifying questions to efficiently diagnose and resolve bugs.
+description: Asks clarifying questions to efficiently diagnose and resolve bugs
+alwaysApply: false
 ---
 
 # Debugging Probing Questions

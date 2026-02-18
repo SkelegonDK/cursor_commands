@@ -1,4 +1,13 @@
-Act like a [role/persona]. 
+---
+description: Reusable prompt template structure for crafting well-structured prompts with role, goal, task, requirements, context, and constraints
+alwaysApply: false
+---
+
+# Prompt Template
+
+Use this structure when crafting prompts:
+
+Act like a [role/persona].
 
 Your goal is to [outcome] for a [audience].
 
